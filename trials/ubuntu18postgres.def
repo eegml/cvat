@@ -15,7 +15,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     apt-get update
     apt-get -y install vim python3 supervisor ffmpeg libldap2-dev \
         libsasl2-dev \
-        python3-dev \
+        python3-dev \o
         python3-pip \
         tzdata \
         p7zip-full \
@@ -25,3 +25,29 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
         curl \
 	postgresql postgresql-contrib
     # apt-get clean
+
+%appinstall postgres
+# this is postgres 10, do I need the client libraries?
+
+
+# %appinstall redis
+
+
+
+# %appinstall cvatdjango
+
+
+
+
+%startscript
+service postgresql start
+
+#export PGUSER="cleemess"
+#export PGSSLMODE="require"
+#export PGSSLCERT="/home/cleemess/database-creds/cleemess.crt"
+#export PGSSLKEY="/home/cleemess/database-creds/cleemess-nopwd.key"
+#export PGHOST="postgres-gen.cleemess-pi.svc.cluster.local"
+
+e# xport PGPORT=5432
+# example not used by default
+# export PGDATABASE="postgres" 

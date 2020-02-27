@@ -9,5 +9,9 @@ sudo singularity instance start --writable-tmpfs ./ubuntu18.sif s18
 
 sudo singularity instance list
 
+sudo singularity instance stop s18
+
 
 sudo singularity shell -C instance://s18
+
+sudo singularity shell -C ./ubuntu18.sif
