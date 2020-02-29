@@ -1,0 +1,8 @@
+# command line wrappers
+
+createdb <cvat>
+
+# dropdb mydb
+
+$ createuser <name>  # CREATE ROLE <name>;
+$ dropuser <name>    # DROP ROLE <name>;
